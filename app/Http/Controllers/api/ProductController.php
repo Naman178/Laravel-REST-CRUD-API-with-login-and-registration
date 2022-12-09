@@ -28,20 +28,28 @@ class ProductController extends BaseController
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
         $input = $request->all();
-   
+        
         $validator = Validator::make($input, [
             'name' => 'required',
             'detail' => 'required',
-            'price' => 'required'
+            'price' => 'required',
+            'product_image' => 'required|image|mimes:jpeg,png,jpg|max:2048'
         ]);
    
         if($validator->fails()){
             return $this->sendError('Validation Error.', $validator->errors());       
         }
-   
-        $product = Product::create($input);
+        
+        $name = $request->post('name');
+        $detail = $request->post('detail');
+        $price = $request->post('price');
+        
+        $product_image = time().'.'.$request->product_image->extension();  
+        $request->product_image->move(public_path('product_image'), $product_image);
+
+        $product = Product::create(['name'=>$name , 'detail'=>$detail , 'price'=>$price,'product_image'=> $product_image]);
    
         return $this->sendResponse(new ProductResource($product), 'Product created successfully.');
     } 

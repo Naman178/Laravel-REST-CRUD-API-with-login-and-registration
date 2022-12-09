@@ -72,7 +72,7 @@ This is simple laravel REST API project with the login and registration function
 	1.Registration (http://localhost:8000/api/register) (https://prnt.sc/hT3FbhwplOwF)
 	2.Login (http://localhost:8000/api/login) (https://prnt.sc/EWE84f09XhI6)
 	3.Product List (http://localhost:8000/api/products) (https://prnt.sc/6rW0m7q7W5_h)
-	4.Add Product (http://localhost:8000/api/products) (https://prnt.sc/BmLKxwlVZk1r)
+	4.Add Product (http://localhost:8000/api/products) (https://prnt.sc/VzSk_9yo1gYm)
 	5.Get Single Prodcut (http://localhost:8000/api/products/1) (https://prnt.sc/HVoKEb941FGu)
 	6.Update Product (http://localhost:8000/api/products/1?name=Testing Name Update&detail=Testing Details Update&price=500) (https://prnt.sc/YiGpMduTYBKf)
 	7.Delete Prodcut (http://localhost:8000/api/products/1) (https://prnt.sc/NNtwsK7WKhCa)
